@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="libraryApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library App</title>
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/table.css">
+
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+</head>
+
+<body>
+
+    <div ui-view></div>
+
+    <script src="app.js"></script>
+    <script src="app/features/main/books/books.controller.js"></script>
+    <script src="app/core/books.service.js"></script>
+    <script src="app/features/main/users/users.controller.js"></script>
+    <script src="app/core/users.service.js"></script>
+</body>
+
+</html>
