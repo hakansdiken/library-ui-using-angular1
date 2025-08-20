@@ -1,0 +1,10 @@
+<h2 class="text-center mb-3">Log In</h2>
+
+<form ng-submit="loginVm.login()">
+    <input type="text" class="form-control mb-2" ng-model="loginVm.user.email" placeholder="Email">
+    <input type="password" class="form-control mb-3" ng-model="loginVm.user.password" placeholder="Password">
+    <button type="submit" class="btn btn-primary w-100">Log In</button>
+</form>
+<div class="text-center mt-2">
+    <small>Don't have an account? <a ui-sref="auth.register">Register</a></small>
+</div>

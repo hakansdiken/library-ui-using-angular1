@@ -1,0 +1,44 @@
+/* Tüm tablolar için ortak stil */
+.table-custom {
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlıklar */
+.table-custom thead th {
+  background-color: #10564f;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 16px;
+}
+
+.table-custom tbody td {
+  padding: 12px 16px;
+  color: #10564f;
+  text-align: center;
+}
+
+table.table-custom tbody tr:hover td {
+  background-color: #dbebed !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Action ikonları */
+.table-custom .btn-link {
+  color: #047076;
+  transition: transform 0.2s ease;
+}
+
+.table-custom .btn-link:hover {
+  transform: scale(1.2);
+}
+
+/* Borrowed ve Available */
+.table-custom td:nth-child(5) {
+  font-weight: 600;
+}

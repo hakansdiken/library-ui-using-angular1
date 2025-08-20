@@ -1,7 +1,12 @@
+.navbar{
+  background-color: #10564f;
+  backdrop-filter: blur(5px);
+}
 .navbar .nav-link {
   border-radius: 0.5rem;
 }
 
 .navbar .nav-link:hover {
-  background: rgb(167, 193, 168);
+  background: #047076;
+  color: #dbebed;
 }

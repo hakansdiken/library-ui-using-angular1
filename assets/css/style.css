@@ -1,0 +1,82 @@
+.renkler {
+  color: #10564f;
+  /* Forest Green */
+}
+
+.renkler {
+  color: #047076;
+}
+
+.renkler {
+  color: #dbebed;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #047076;
+  border-color: #047076;
+}
+
+.btn-primary {
+  background-color: #10564f;
+  border-color: #10564f;
+  border-radius: 0.5rem;
+}
+
+.btn-primary:active {
+  background-color: #047076 !important;
+  box-shadow: 0 0 0 0.25rem rgba(4, 112, 118, 0.5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: #10564f;
+  font-family: 'Inter', 'Roboto', 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+/* Form inputları */
+input.form-control,
+textarea.form-control,
+select.form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #047076;
+  padding: 0.5rem 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Input focus efekti */
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-select:focus {
+  border-color: #10564f;
+  box-shadow: 0 0 5px rgba(16, 86, 79, 0.5);
+  outline: none;
+}
+
+/* Placeholder rengi */
+::placeholder {
+  color: #10564f !important;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background-color: #dbebed45;
+  padding: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}

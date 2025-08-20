@@ -1,8 +1,42 @@
 <div class="container">
-    <h1 class="my-4 text-center" style="color: rgb(129, 154, 145);">Book List</h1>
 
-    <div class="container">
-        <table class="table table-hover">
+    <!-- FORM MODE -->
+    <div class="form-container col-md-12 col-lg-6 mx-auto" ng-hide="booksVm.viewMode">
+
+        <h1 class="my-4 text-center">Add Book</h1>
+
+        <form ng-submit="booksVm.addBook()">
+
+            <input type="text" class="form-control mb-3" ng-model="booksVm.book.title" placeholder="Title">
+            <input type="text" class="form-control mb-3" ng-model="booksVm.book.author" placeholder="Author">
+            <textarea class="form-control mb-3" ng-model="booksVm.book.description" placeholder="Description"
+                rows="3"></textarea>
+            <input type="text" class="form-control mb-3" ng-model="booksVm.book.publisher" placeholder="Publisher">
+            <input type="number" class="form-control mb-3" ng-model="booksVm.book.publicationYear"
+                placeholder="Publication Year">
+            <input type="number" class="form-control mb-3" ng-model="booksVm.book.pageCount" placeholder="Page Count">
+            <input type="text" class="form-control mb-3" ng-model="booksVm.book.isbn" placeholder="ISBN">
+            <input type="text" class="form-control mb-3" ng-model="booksVm.book.deweyCode" placeholder="Dewey Code">
+
+            <div class="d-flex gap-3">
+                <button type="submit" class="btn btn-primary w-50">Add</button>
+                <button type="reset" class="btn btn-primary w-50" ng-click="booksVm.cancelForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- VIEW MODE -->
+    <div ng-show="booksVm.viewMode">
+
+        <h1 class="mt-4">Book List</h1>
+
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary mb-3" ng-click="booksVm.showForm()">
+                <i class="bi bi-plus-lg"></i>
+            </button>
+        </div>
+
+        <table class="table table-custom">
             <thead>
                 <tr>
                     <th>Title</th>
@@ -19,12 +53,14 @@
                     <td>{{ book.author }}</td>
                     <td>{{ book.publisher }}</td>
                     <td>{{ book.publicationYear }}</td>
-                    <td>{{ book.isBorrowed ? 'Borrowed' : 'Available' }}</td>
+                    <td ng-class="book.isBorrowed ? 'text-danger' : 'text-success'">
+                        {{ book.isBorrowed ? 'Borrowed' : 'Available' }}
+                    </td>
                     <td>
                         <button type="button" class="btn btn-link p-0 border-0">
                             <i class="bi bi-pencil-square fs-5 text-secondary"></i>
                         </button>
-                        <button type="button" class="btn btn-link p-0 border-0">
+                        <button type="button" class="btn btn-link p-0 border-0" ng-click="booksVm.deleteBook(book.id)">
                             <i class="bi bi-trash fs-5 text-danger"></i>
                         </button>
                     </td>

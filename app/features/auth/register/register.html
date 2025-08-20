@@ -1,0 +1,16 @@
+<h2 class="text-center mb-3">Register</h2>
+
+<form ng-submit="registerVm.register()">
+    <div class="name-container">
+        <input type="text" class="form-control mb-3" ng-model="registerVm.user.name" placeholder="Name">
+        <input type="text" class="form-control mb-3" ng-model="registerVm.user.surname" placeholder="Surname">
+    </div>
+
+    <input type="email" class="form-control mb-3" ng-model="registerVm.user.email" placeholder="Email">
+    <input type="password" class="form-control mb-3" ng-model="registerVm.user.password" placeholder="Password">
+
+    <button type="submit" class="btn btn-primary w-100">Register</button>
+</form>
+<div class="text-center mt-2">
+    <small>Do you have an account? <a ui-sref="auth.login">Log In</a></small>
+</div>
