@@ -37,20 +37,21 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'UsersController',
             controllerAs: 'usersVm'
         })
-        // .state('admin', {
-        //     abstract: false,
-        //     templateUrl: 'app/features/admin/admin.html',
-        // })
-        // .state('admin.books', {
-        //     url: '/books',
-        //     templateUrl: 'app/features/main/books/books.html',
-        //     controller: 'BooksController',
-        //     controllerAs: 'booksVm'
-        // })
-        // .state('admin.users', {
-        //     url: '/users',
-        //     templateUrl: 'app/features/main/users/users.html',
-        //     controller: 'UsersController',
-        //     controllerAs: 'usersVm'
-        // });
+        .state('admin', {
+            abstract: true,
+            url:'/admin',
+            templateUrl: 'app/features/admin/admin.html',
+        })
+        .state('admin.books', {
+            url: '/books',
+            templateUrl: 'app/features/main/books/books.html',
+            controller: 'BooksController',
+            controllerAs: 'booksVm'
+        })
+        .state('admin.users', {
+            url: '/users',
+            templateUrl: 'app/features/main/users/users.html',
+            controller: 'UsersController',
+            controllerAs: 'usersVm'
+        });
 });
